@@ -1,0 +1,27 @@
+# Visual Studio
+.vs/
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# NuGet
+packages/
+*.nupkg
+
+# Logs
+*.log
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# SQL LocalDB
+*.mdf
+*.ldf
+
+# Temporary files
+*.tmp
+*.cache

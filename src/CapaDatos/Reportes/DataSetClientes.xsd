@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSetClientes" targetNamespace="http://tempuri.org/DataSetClientes.xsd" xmlns:mstns="http://tempuri.org/DataSetClientes.xsd" xmlns="http://tempuri.org/DataSetClientes.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="DB_FacturacionConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="DB_FacturacionConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.CapaDatos.Properties.Settings.GlobalReference.Default.DB_FacturacionConnectionString1" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ClienteTableAdapter" GeneratorDataComponentClassName="ClienteTableAdapter" Name="Cliente" UserDataComponentName="ClienteTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DB_FacturacionConnectionString1 (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT 
+    C.ClienteID,
+    C.Nombre AS ClienteNombre,
+    C.CUIT_CUIL AS ClienteCUIT_CUIL,
+    C.Domicilio AS ClienteDomicilio,
+    L1.Nombre AS ClienteLocalidad,
+    P1.Nombre AS ClienteProvincia,
+    CV.Descripcion AS ClienteCondicionVenta,
+    CI.Descripcion AS ClienteCondicionIVA,
+
+    E.EmpresaID,
+    E.Nombre AS EmpresaNombre,
+    E.CUIT AS EmpresaCUIT,
+    E.Domicilio AS EmpresaDomicilio,
+    L2.Nombre AS EmpresaLocalidad,
+    P2.Nombre AS EmpresaProvincia,
+    CIE.Descripcion AS EmpresaCondicionIVA
+
+FROM Cliente AS C
+    INNER JOIN Localidad AS L1 ON C.LocalidadID = L1.LocalidadID
+    INNER JOIN Provincia AS P1 ON L1.ProvinciaID = P1.ProvinciaID
+    INNER JOIN CondicionVenta AS CV ON C.CondicionVentaID = CV.CondicionVentaID
+    INNER JOIN CondicionIVA AS CI ON C.CondicionIVAID = CI.CondicionIVAID
+
+    CROSS JOIN (
+        SELECT TOP 1 
+            EmpresaID,
+            Nombre,
+            CUIT,
+            Domicilio,
+            LocalidadID,
+            CondicionIVAID
+        FROM Empresa
+        ORDER BY EmpresaID
+    ) AS E
+    INNER JOIN Localidad AS L2 ON E.LocalidadID = L2.LocalidadID
+    INNER JOIN Provincia AS P2 ON L2.ProvinciaID = P2.ProvinciaID
+    INNER JOIN CondicionIVA AS CIE ON E.CondicionIVAID = CIE.CondicionIVAID
+
+WHERE C.Activo = 1
+
+ORDER BY C.Nombre;
+</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ClienteID" DataSetColumn="ClienteID" />
+              <Mapping SourceColumn="ClienteNombre" DataSetColumn="ClienteNombre" />
+              <Mapping SourceColumn="ClienteDomicilio" DataSetColumn="ClienteDomicilio" />
+              <Mapping SourceColumn="EmpresaID" DataSetColumn="EmpresaID" />
+              <Mapping SourceColumn="EmpresaNombre" DataSetColumn="EmpresaNombre" />
+              <Mapping SourceColumn="EmpresaCUIT" DataSetColumn="EmpresaCUIT" />
+              <Mapping SourceColumn="EmpresaDomicilio" DataSetColumn="EmpresaDomicilio" />
+              <Mapping SourceColumn="ClienteCUIT_CUIL" DataSetColumn="ClienteCUIT_CUIL" />
+              <Mapping SourceColumn="ClienteLocalidad" DataSetColumn="ClienteLocalidad" />
+              <Mapping SourceColumn="ClienteProvincia" DataSetColumn="ClienteProvincia" />
+              <Mapping SourceColumn="EmpresaLocalidad" DataSetColumn="EmpresaLocalidad" />
+              <Mapping SourceColumn="EmpresaProvincia" DataSetColumn="EmpresaProvincia" />
+              <Mapping SourceColumn="ClienteCondicionVenta" DataSetColumn="ClienteCondicionVenta" />
+              <Mapping SourceColumn="ClienteCondicionIVA" DataSetColumn="ClienteCondicionIVA" />
+              <Mapping SourceColumn="EmpresaCondicionIVA" DataSetColumn="EmpresaCondicionIVA" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSetClientes" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DataSetClientes" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetClientes">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Cliente" msprop:Generator_RowEvHandlerName="ClienteRowChangeEventHandler" msprop:Generator_RowDeletedName="ClienteRowDeleted" msprop:Generator_RowDeletingName="ClienteRowDeleting" msprop:Generator_RowEvArgName="ClienteRowChangeEvent" msprop:Generator_TablePropName="Cliente" msprop:Generator_RowChangedName="ClienteRowChanged" msprop:Generator_UserTableName="Cliente" msprop:Generator_RowChangingName="ClienteRowChanging" msprop:Generator_RowClassName="ClienteRow" msprop:Generator_TableClassName="ClienteDataTable" msprop:Generator_TableVarName="tableCliente">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ClienteID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInTable="ClienteIDColumn" msprop:Generator_ColumnPropNameInRow="ClienteID" msprop:Generator_UserColumnName="ClienteID" msprop:Generator_ColumnVarNameInTable="columnClienteID" type="xs:int" />
+              <xs:element name="ClienteNombre" msprop:Generator_ColumnPropNameInTable="ClienteNombreColumn" msprop:Generator_ColumnPropNameInRow="ClienteNombre" msprop:Generator_UserColumnName="ClienteNombre" msprop:Generator_ColumnVarNameInTable="columnClienteNombre">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ClienteDomicilio" msprop:Generator_ColumnPropNameInTable="ClienteDomicilioColumn" msprop:Generator_ColumnPropNameInRow="ClienteDomicilio" msprop:Generator_UserColumnName="ClienteDomicilio" msprop:Generator_ColumnVarNameInTable="columnClienteDomicilio" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EmpresaID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInTable="EmpresaIDColumn" msprop:Generator_ColumnPropNameInRow="EmpresaID" msprop:Generator_UserColumnName="EmpresaID" msprop:Generator_ColumnVarNameInTable="columnEmpresaID" type="xs:int" />
+              <xs:element name="EmpresaNombre" msprop:Generator_ColumnPropNameInTable="EmpresaNombreColumn" msprop:Generator_ColumnPropNameInRow="EmpresaNombre" msprop:Generator_UserColumnName="EmpresaNombre" msprop:Generator_ColumnVarNameInTable="columnEmpresaNombre">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EmpresaCUIT" msprop:Generator_ColumnPropNameInTable="EmpresaCUITColumn" msprop:Generator_ColumnPropNameInRow="EmpresaCUIT" msprop:Generator_UserColumnName="EmpresaCUIT" msprop:Generator_ColumnVarNameInTable="columnEmpresaCUIT">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EmpresaDomicilio" msprop:Generator_ColumnPropNameInTable="EmpresaDomicilioColumn" msprop:Generator_ColumnPropNameInRow="EmpresaDomicilio" msprop:Generator_UserColumnName="EmpresaDomicilio" msprop:Generator_ColumnVarNameInTable="columnEmpresaDomicilio" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ClienteCUIT_CUIL" msprop:Generator_ColumnPropNameInTable="ClienteCUIT_CUILColumn" msprop:Generator_ColumnPropNameInRow="ClienteCUIT_CUIL" msprop:Generator_UserColumnName="ClienteCUIT_CUIL" msprop:Generator_ColumnVarNameInTable="columnClienteCUIT_CUIL">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ClienteLocalidad" msprop:Generator_ColumnPropNameInTable="ClienteLocalidadColumn" msprop:Generator_ColumnPropNameInRow="ClienteLocalidad" msprop:Generator_UserColumnName="ClienteLocalidad" msprop:Generator_ColumnVarNameInTable="columnClienteLocalidad">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ClienteProvincia" msprop:Generator_ColumnPropNameInTable="ClienteProvinciaColumn" msprop:Generator_ColumnPropNameInRow="ClienteProvincia" msprop:Generator_UserColumnName="ClienteProvincia" msprop:Generator_ColumnVarNameInTable="columnClienteProvincia">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EmpresaLocalidad" msprop:Generator_ColumnPropNameInTable="EmpresaLocalidadColumn" msprop:Generator_ColumnPropNameInRow="EmpresaLocalidad" msprop:Generator_UserColumnName="EmpresaLocalidad" msprop:Generator_ColumnVarNameInTable="columnEmpresaLocalidad">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EmpresaProvincia" msprop:Generator_ColumnPropNameInTable="EmpresaProvinciaColumn" msprop:Generator_ColumnPropNameInRow="EmpresaProvincia" msprop:Generator_UserColumnName="EmpresaProvincia" msprop:Generator_ColumnVarNameInTable="columnEmpresaProvincia">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ClienteCondicionVenta" msprop:Generator_ColumnPropNameInTable="ClienteCondicionVentaColumn" msprop:Generator_ColumnPropNameInRow="ClienteCondicionVenta" msprop:Generator_UserColumnName="ClienteCondicionVenta" msprop:Generator_ColumnVarNameInTable="columnClienteCondicionVenta">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ClienteCondicionIVA" msprop:Generator_ColumnPropNameInTable="ClienteCondicionIVAColumn" msprop:Generator_ColumnPropNameInRow="ClienteCondicionIVA" msprop:Generator_UserColumnName="ClienteCondicionIVA" msprop:Generator_ColumnVarNameInTable="columnClienteCondicionIVA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EmpresaCondicionIVA" msprop:Generator_ColumnPropNameInTable="EmpresaCondicionIVAColumn" msprop:Generator_ColumnPropNameInRow="EmpresaCondicionIVA" msprop:Generator_UserColumnName="EmpresaCondicionIVA" msprop:Generator_ColumnVarNameInTable="columnEmpresaCondicionIVA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Cliente" />
+      <xs:field xpath="mstns:ClienteID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

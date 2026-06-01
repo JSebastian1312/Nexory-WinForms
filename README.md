@@ -128,11 +128,11 @@ Nexory-WinForms
 
 └── src
 
-&#x20;   ├── CapaPresentacion
+   ├── CapaPresentacion
 
-&#x20;   ├── CapaEntidad
+   ├── CapaEntidad
 
-&#x20;   └── CapaDatos
+   └── CapaDatos
 
 ```
 

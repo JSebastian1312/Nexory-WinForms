@@ -190,11 +190,11 @@ Gestiona la conexión con SQL Server y todas las operaciones de acceso a datos.
 
 ## Facturación
 
-### Factura - Vista 1
+### Factura - Generación de factura (Tipo A)
 
 ![Factura A](docs/screenshots/facturaa.png)
 
-### Factura - Vista 2
+### Factura - Generación de factura (Tipo B)
 
 ![Factura B](docs/screenshots/facturab.png)
 
@@ -232,7 +232,7 @@ Cadena de conexión utilizada durante el desarrollo:
 
 ```xml
 
-Data Source=SERVIDORSQLEXPRESS;
+Data Source=SERVIDOR\SQLEXPRESS;
 
 Initial Catalog=DB_Facturacion;
 
@@ -337,5 +337,3 @@ Ejecutar el proyecto desde Visual Studio.
 ---
 
 ⭐ Si te resulta interesante este proyecto, no olvides dejar una estrella en el repositorio.
-
-H

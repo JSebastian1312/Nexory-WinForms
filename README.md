@@ -1,170 +1,112 @@
-\# 🚀 Nexory - Sistema Integral de Gestión Comercial
+# 🚀 Nexory - Sistema Integral de Gestión Comercial
 
+Aplicación de escritorio desarrollada con **C#, Windows Forms y SQL Server**, diseñada para optimizar la gestión comercial mediante herramientas de administración de clientes, productos, facturación y generación de reportes.
 
+---
 
-Aplicación de escritorio desarrollada con \*\*C#, Windows Forms y SQL Server\*\*, diseñada para optimizar la gestión comercial mediante herramientas de administración de clientes, productos, facturación y generación de reportes.
+# 🎥 Video Demo
 
-
-
-\---
-
-
-
-\# 🎥 Video Demo
-
-
-
-\### Ver demostración completa del sistema
-
-
+### Ver demostración completa del sistema
 
 https://github.com/user-attachments/assets/da31e85a-332a-49bf-8907-fea14c8efa8c
 
+---
 
+# 📋 Descripción
 
-\---
-
-
-
-\# 📋 Descripción
-
-
-
-\*\*Nexory\*\* es una solución de gestión comercial orientada a pequeñas y medianas empresas que necesitan centralizar y optimizar sus procesos administrativos.
-
-
+**Nexory** es una solución de gestión comercial orientada a pequeñas y medianas empresas que necesitan centralizar y optimizar sus procesos administrativos.
 
 El sistema permite:
 
+- Gestión de clientes
 
+- Gestión de productos
 
-\* Gestión de clientes
+- Facturación comercial
 
-\* Gestión de productos
+- Generación de reportes
 
-\* Facturación comercial
+- Administración de información empresarial
 
-\* Generación de reportes
+- Integración con SQL Server
 
-\* Administración de información empresarial
+- Reportes profesionales mediante Crystal Reports
 
-\* Integración con SQL Server
+La aplicación fue desarrollada siguiendo una **arquitectura multicapa**, promoviendo una mejor organización del código, escalabilidad y mantenibilidad.
 
-\* Reportes profesionales mediante Crystal Reports
+---
 
+# ✨ Funcionalidades Principales
 
+### 👥 Gestión de Clientes
 
-La aplicación fue desarrollada siguiendo una \*\*arquitectura multicapa\*\*, promoviendo una mejor organización del código, escalabilidad y mantenibilidad.
+- Alta de clientes
 
+- Modificación de clientes
 
+- Eliminación de clientes
 
-\---
+- Búsquedas y consultas
 
+### 📦 Gestión de Productos
 
+- Alta de productos
 
-\# ✨ Funcionalidades Principales
+- Actualización de información
 
+- Control de inventario
 
+- Administración comercial
 
-\### 👥 Gestión de Clientes
+### 🧾 Facturación
 
+- Generación de facturas
 
+- Cálculo automático de importes
 
-\* Alta de clientes
+- Gestión de detalle de productos
 
-\* Modificación de clientes
+- Registro de operaciones comerciales
 
-\* Eliminación de clientes
+### 📊 Reportes
 
-\* Búsquedas y consultas
+- Reportes de clientes
 
+- Reportes de productos
 
+- Visualización profesional mediante Crystal Reports
 
-\### 📦 Gestión de Productos
+### 🗄 Base de Datos
 
+- Persistencia de información en SQL Server
 
+- Consultas optimizadas
 
-\* Alta de productos
+- Gestión relacional de datos
 
-\* Actualización de información
+---
 
-\* Control de inventario
+# 🛠 Tecnologías Utilizadas
 
-\* Administración comercial
+- C#
 
+- .NET Framework 4.7.2
 
+- Windows Forms (WinForms)
 
-\### 🧾 Facturación
+- SQL Server
 
+- Crystal Reports
 
+- ADO.NET
 
-\* Generación de facturas
+- Git
 
-\* Cálculo automático de importes
+- GitHub
 
-\* Gestión de detalle de productos
+---
 
-\* Registro de operaciones comerciales
-
-
-
-\### 📊 Reportes
-
-
-
-\* Reportes de clientes
-
-\* Reportes de productos
-
-\* Visualización profesional mediante Crystal Reports
-
-
-
-\### 🗄 Base de Datos
-
-
-
-\* Persistencia de información en SQL Server
-
-\* Consultas optimizadas
-
-\* Gestión relacional de datos
-
-
-
-\---
-
-
-
-\# 🛠 Tecnologías Utilizadas
-
-
-
-\* C#
-
-\* .NET Framework 4.7.2
-
-\* Windows Forms (WinForms)
-
-\* SQL Server
-
-\* Crystal Reports
-
-\* ADO.NET
-
-\* Git
-
-\* GitHub
-
-
-
-\---
-
-
-
-\# 🏗 Arquitectura del Proyecto
-
-
+# 🏗 Arquitectura del Proyecto
 
 ```text
 
@@ -194,179 +136,91 @@ Nexory-WinForms
 
 ```
 
-
-
-\## CapaPresentacion
-
-
+## CapaPresentacion
 
 Contiene toda la interfaz gráfica del sistema y la interacción con el usuario.
 
-
-
-\## CapaEntidad
-
-
+## CapaEntidad
 
 Contiene las entidades de negocio utilizadas por la aplicación.
 
-
-
-\## CapaDatos
-
-
+## CapaDatos
 
 Gestiona la conexión con SQL Server y todas las operaciones de acceso a datos.
 
+---
 
+# 📸 Capturas de Pantalla
 
-\---
+## Login
 
+![Login](docs/screenshots/login.png)
 
+---
 
-\# 📸 Capturas de Pantalla
+## Menú Principal
 
+![Menú Principal](docs/screenshots/menuprincipal.png)
 
+---
 
-\## Login
+## Inicio
 
+![Inicio](docs/screenshots/inicio.png)
 
+---
 
-!\[Login](docs/screenshots/login.png)
+## Gestión General
 
+![Gestión General](docs/screenshots/gestion.png)
 
+---
 
-\---
+## Gestión de Clientes
 
+![Gestión de Clientes](docs/screenshots/gestioncliente.png)
 
+---
 
-\## Menú Principal
+## Gestión de Productos
 
+![Gestión de Productos](docs/screenshots/gestionproducto.png)
 
+---
 
-!\[Menú Principal](docs/screenshots/menuprincipal.png)
+## Facturación
 
+### Factura - Vista 1
 
+![Factura A](docs/screenshots/facturaa.png)
 
-\---
+### Factura - Vista 2
 
+![Factura B](docs/screenshots/facturab.png)
 
+---
 
-\## Inicio
+## Reportes
 
+![Reportes](docs/screenshots/reportes.png)
 
+---
 
-!\[Inicio](docs/screenshots/inicio.png)
+## Reporte de Clientes
 
+![Reporte Clientes](docs/screenshots/reporteclientes.png)
 
+---
 
-\---
+## Reporte de Productos
 
+![Reporte Productos](docs/screenshots/reporteproductos.png)
 
+---
 
-\## Gestión General
-
-
-
-!\[Gestión General](docs/screenshots/gestion.png)
-
-
-
-\---
-
-
-
-\## Gestión de Clientes
-
-
-
-!\[Gestión de Clientes](docs/screenshots/gestioncliente.png)
-
-
-
-\---
-
-
-
-\## Gestión de Productos
-
-
-
-!\[Gestión de Productos](docs/screenshots/gestionproducto.png)
-
-
-
-\---
-
-
-
-\## Facturación
-
-
-
-\### Factura - Vista 1
-
-
-
-!\[Factura A](docs/screenshots/facturaa.png)
-
-
-
-\### Factura - Vista 2
-
-
-
-!\[Factura B](docs/screenshots/facturab.png)
-
-
-
-\---
-
-
-
-\## Reportes
-
-
-
-!\[Reportes](docs/screenshots/reportes.png)
-
-
-
-\---
-
-
-
-\## Reporte de Clientes
-
-
-
-!\[Reporte Clientes](docs/screenshots/reporteclientes.png)
-
-
-
-\---
-
-
-
-\## Reporte de Productos
-
-
-
-!\[Reporte Productos](docs/screenshots/reporteproductos.png)
-
-
-
-\---
-
-
-
-\# ⚙️ Base de Datos
-
-
+# ⚙️ Base de Datos
 
 El script completo de creación de la base de datos se encuentra disponible en:
-
-
 
 ```text
 
@@ -374,35 +228,23 @@ database/script.sql
 
 ```
 
-
-
 Cadena de conexión utilizada durante el desarrollo:
-
-
 
 ```xml
 
-Data Source=SERVIDOR\\SQLEXPRESS;
+Data Source=SERVIDORSQLEXPRESS;
 
-Initial Catalog=DB\_Facturacion;
+Initial Catalog=DB_Facturacion;
 
 Integrated Security=True;
 
 ```
 
+---
 
+# 🚀 Instalación
 
-\---
-
-
-
-\# 🚀 Instalación
-
-
-
-\### 1. Clonar el repositorio
-
-
+### 1. Clonar el repositorio
 
 ```bash
 
@@ -410,15 +252,9 @@ git clone https://github.com/JSebastian1312/Nexory-WinForms.git
 
 ```
 
-
-
-\### 2. Crear la base de datos
-
-
+### 2. Crear la base de datos
 
 Ejecutar:
-
-
 
 ```text
 
@@ -426,19 +262,11 @@ database/script.sql
 
 ```
 
-
-
 en SQL Server Management Studio.
 
-
-
-\### 3. Configurar la conexión
-
-
+### 3. Configurar la conexión
 
 Modificar las cadenas de conexión ubicadas en:
-
-
 
 ```text
 
@@ -448,11 +276,7 @@ src/CapaPresentacion/App.config
 
 ```
 
-
-
-\### 4. Abrir la solución
-
-
+### 4. Abrir la solución
 
 ```text
 
@@ -460,91 +284,58 @@ src/ProyectoSistemaFacturacion.sln
 
 ```
 
-
-
-\### 5. Restaurar paquetes NuGet
-
-
+### 5. Restaurar paquetes NuGet
 
 Restaurar las dependencias necesarias desde Visual Studio.
 
-
-
-\### 6. Compilar y ejecutar
-
-
+### 6. Compilar y ejecutar
 
 Ejecutar el proyecto desde Visual Studio.
 
+---
 
+# 🎯 Objetivos del Proyecto
 
-\---
+- Aplicar arquitectura multicapa.
 
+- Implementar buenas prácticas de desarrollo.
 
+- Gestionar información comercial de forma eficiente.
 
-\# 🎯 Objetivos del Proyecto
+- Utilizar SQL Server como motor de base de datos.
 
+- Integrar Crystal Reports para reportes profesionales.
 
+- Implementar control de clientes, productos y facturación en una única plataforma.
 
-\* Aplicar arquitectura multicapa.
+---
 
-\* Implementar buenas prácticas de desarrollo.
+# 👨‍💻 Autor
 
-\* Gestionar información comercial de forma eficiente.
+## Juan Sebastián Rivadero
 
-\* Utilizar SQL Server como motor de base de datos.
-
-\* Integrar Crystal Reports para reportes profesionales.
-
-\* Implementar control de clientes, productos y facturación en una única plataforma.
-
-
-
-\---
-
-
-
-\# 👨‍💻 Autor
-
-
-
-\## Juan Sebastián Rivadero
-
-
-
-\*\*Desarrollador de Software\*\*
-
-
+**Desarrollador de Software**
 
 📍 Rafaela, Santa Fe, Argentina
 
+### Tecnologías de interés
 
+- Desarrollo Desktop
 
-\### Tecnologías de interés
+- Desarrollo Web
 
+- Bases de Datos
 
+- SQL Server
 
-\* Desarrollo Desktop
+- Flutter
 
-\* Desarrollo Web
+- Firebase
 
-\* Bases de Datos
+- Git & GitHub
 
-\* SQL Server
-
-\* Flutter
-
-\* Firebase
-
-\* Git \& GitHub
-
-
-
-\---
-
-
+---
 
 ⭐ Si te resulta interesante este proyecto, no olvides dejar una estrella en el repositorio.
 
-
-
+H
